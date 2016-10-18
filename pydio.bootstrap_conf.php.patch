@@ -1,0 +1,11 @@
+--- /var/www/pydio/conf/bootstrap_conf.php	2016-10-18 14:01:57.049032487 -0300
++++ /var/www/pydio/conf/bootstrap_conf.php.updated	2016-10-18 14:01:28.695218881 -0300
+@@ -30,7 +30,7 @@
+  * define("AJXP_LOCALE", "");
+  */
+ //define("AJXP_LOCALE", "en_EN.UTF-8");
+-//define("AJXP_LOCALE", "");
++define("AJXP_LOCALE", "en_CA.UTF-8");
+ 
+ 
+ /*
