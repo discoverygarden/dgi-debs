@@ -1,0 +1,24 @@
+--- /etc/apache2/sites-available/000-default.conf	2016-10-18 13:14:56.690005553 -0300
++++ /etc/apache2/sites-available/000-default.conf.updated.pydio	2016-10-18 13:04:43.757706939 -0300
+@@ -1,5 +1,6 @@
+ <VirtualHost *:80>
+         ServerAdmin webmaster@localhost
++        ServerName http://rdmpdemo.clients.discoverygarden.ca
+ 
+         DocumentRoot /var/www/drupal7
+         <Directory />
+@@ -29,6 +30,14 @@
+ 
+         CustomLog ${APACHE_LOG_DIR}/access.log combined
+ 
++    Alias  /pydio /var/www/pydio/
++        <Directory "/var/www/pydio/">
++        Options FollowSymLinks
++        AllowOverride Limit FileInfo
++        Order allow,deny
++        Allow from all
++        </Directory>
++
+     Alias /doc/ "/usr/share/doc/"
+     <Directory "/usr/share/doc/">
+         Options Indexes MultiViews FollowSymLinks
